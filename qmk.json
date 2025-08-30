@@ -160,6 +160,22 @@
                 "HLC_NONE": "1",
                 "TARGET": "splitkb_halcyon_ferris_rev1_default_hlc"
             }
+        ],
+        [
+            "splitkb/halcyon/ferris/rev1",
+            "adam_halcyon_ferris_rev1_v1",
+            {
+                "HLC_TFT_DISPLAY": "1",
+                "TARGET": "splitkb_halcyon_ferris_rev1_adam_v1_hlc_display"
+            }
+        ],
+        [
+            "splitkb/halcyon/ferris/rev1",
+            "adam_halcyon_ferris_rev1_v1",
+            {
+                "HLC_NONE": "1",
+                "TARGET": "splitkb_halcyon_ferris_rev1_adam_v1_hlc"
+            }
         ]
     ]
 }
