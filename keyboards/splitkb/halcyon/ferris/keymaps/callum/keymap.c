@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_ferris_hlc(
-        KC_TAB,  SW_WIN,  TABL,    TABR,    KC_VOLU, KC_DEL, KC_HOME, KC_UP,   KC_END,  XXXXXXX,
+        KC_NUM,  KC_MUTE, S(KC_TAB),KC_TAB, KC_VOLU, KC_DEL, KC_HOME, KC_UP,   KC_END,  XXXXXXX,
         OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_VOLD, KC_BSPC,KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,
         SPCL,    SPC_R,   KC_WBAK, KC_WFWD, KC_MPLY, KC_ENT, KC_PGDN, KC_PGUP, SW_LANG, XXXXXXX,
                                    _______, _______, _______, _______,
