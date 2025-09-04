@@ -176,6 +176,7 @@
                 "HLC_NONE": "1",
                 "TARGET": "splitkb_halcyon_ferris_rev1_adam_v1_hlc"
             }
-        ]
+        ],
+        ["splitkb/halcyon/ferris/rev1", "callum"]
     ]
 }
