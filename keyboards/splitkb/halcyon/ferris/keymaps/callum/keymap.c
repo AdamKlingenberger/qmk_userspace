@@ -44,9 +44,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYM] = LAYOUT_ferris_hlc(
-        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, KC_AMPR, KC_EXLM, KC_QUES, KC_GRV,
-        KC_DLR,  KC_TILD, KC_LPRN, KC_RPRN, KC_ASTR, KC_MINS, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX, KC_UNDS, KC_SCLN, KC_COLN, XXXXXXX, KC_BSLS,
+        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, KC_MINS, KC_EXLM, KC_QUES, KC_EQL,
+        KC_DLR,  KC_TILD, KC_LPRN, KC_RPRN, KC_ASTR, KC_AMPR, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX, KC_GRV,  KC_UNDS, KC_COLN, KC_SCLN, KC_BSLS,
                                    _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
@@ -67,11 +67,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
     [PWR] = LAYOUT_ferris_hlc(
-	KC_NUM,  XXXXXXX, QK_AREP, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX, RM_NEXT,
-	CW_TOGG, XXXXXXX, QK_REP,  KC_ENT,  KC_ESC,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-	KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPLY, KC_MNXT, KC_MPRV, XXXXXXX, RM_TOGG,
-	                           _______, KC_TAB,  XXXXXXX, _______,
-	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+        KC_NUM,  XXXXXXX, QK_AREP, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRIU, RM_NEXT,
+        CW_TOGG, XXXXXXX, QK_REP,  KC_ENT,  KC_ESC,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPLY, KC_MNXT, KC_MPRV, KC_BRID, RM_TOGG,
+                                   _______, KC_TAB,  XXXXXXX, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 };
 
