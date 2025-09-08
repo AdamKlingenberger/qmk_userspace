@@ -13,12 +13,14 @@
 #define SPC_R C(G(KC_RGHT))
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
+#define LA_PWR LT(4,KC_SPC)
 
 enum layers {
     DEF,
     SYM,
     NAV,
     NUM,
+    PWR,
 };
 
 enum keycodes {
@@ -37,32 +39,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
         KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOT,
         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-                                   LA_NAV,  KC_LSFT, KC_SPC,  LA_SYM,
+	                           LA_NAV,  OS_SHFT, LA_PWR,  LA_SYM,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [SYM] = LAYOUT_ferris_hlc(
-        KC_ESC,  KC_LBRC, KC_LCBR, KC_LPRN, KC_TILD, KC_CIRC, KC_RPRN, KC_RCBR, KC_RBRC, KC_GRV,
-        KC_MINS, KC_ASTR, KC_EQL,  KC_UNDS, KC_DLR,  KC_HASH, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_PLUS, KC_PIPE, KC_AT,   KC_BSLS, KC_PERC, XXXXXXX, KC_AMPR, KC_SCLN, KC_COLN, KC_EXLM,
+        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, KC_AMPR, KC_EXLM, KC_QUES, KC_GRV,
+        KC_DLR,  KC_TILD, KC_LPRN, KC_RPRN, KC_ASTR, KC_MINS, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX, KC_UNDS, KC_SCLN, KC_COLN, XXXXXXX, KC_BSLS,
                                    _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [NAV] = LAYOUT_ferris_hlc(
-        KC_NUM,  KC_MUTE, S(KC_TAB),KC_TAB, KC_VOLU, KC_DEL, KC_HOME, KC_UP,   KC_END,  XXXXXXX,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_VOLD, KC_BSPC,KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,
-        SPCL,    SPC_R,   KC_WBAK, KC_WFWD, KC_MPLY, KC_ENT, KC_PGDN, KC_PGUP, SW_LANG, XXXXXXX,
-                                   _______, _______, _______, _______,
+        XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, KC_DEL,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
+        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
+        SW_LANG, XXXXXXX, SPCL,    SPC_R,   XXXXXXX, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
+                                   _______, _______, KC_TAB,  _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [NUM] = LAYOUT_ferris_hlc(
-        KC_7,    KC_5,    KC_3,    KC_1,    KC_9,    KC_8,    KC_0,    KC_2,    KC_4,    KC_6,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT,  KC_F11,  KC_F10,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_F7,   KC_F5,   KC_F3,   KC_F1,   KC_F9,   KC_F8,   KC_F12,  KC_F2,   KC_F4,   KC_F6,
-                                   _______, _______, _______, _______,
+        KC_F8,   KC_F7,   KC_F6,   KC_F5,   KC_F12,  KC_MINS, KC_7,    KC_8,    KC_9,    KC_EQL,
+        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_F10,  KC_DOT,  KC_4,    KC_5,    KC_6,    KC_0,
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F11,  KC_COMM, KC_1,    KC_2,    KC_3,    KC_SLSH,
+                                   _______, _______, KC_F9,   _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    ),
+    [PWR] = LAYOUT_ferris_hlc(
+	KC_NUM,  XXXXXXX, QK_AREP, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX, RM_NEXT,
+	CW_TOGG, XXXXXXX, QK_REP,  KC_ENT,  KC_ESC,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+	KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPLY, KC_MNXT, KC_MPRV, XXXXXXX, RM_TOGG,
+	                           _______, KC_TAB,  XXXXXXX, _______,
+	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 };
 
