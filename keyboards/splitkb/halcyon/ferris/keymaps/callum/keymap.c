@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, KC_DEL,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
         OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
         SW_LANG, XXXXXXX, SPCL,    SPC_R,   XXXXXXX, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
-                                   _______, _______, KC_TAB,  _______,
+                                   _______, _______, KC_BSPC,  _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NUM,  XXXXXXX, QK_AREP, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRIU, RM_NEXT,
         CW_TOGG, XXXXXXX, QK_REP,  KC_ENT,  KC_ESC,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
         KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPLY, KC_MNXT, KC_MPRV, KC_BRID, RM_TOGG,
-                                   _______, KC_TAB,  XXXXXXX, _______,
+                                   KC_BSPC, KC_TAB,  XXXXXXX, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 };
