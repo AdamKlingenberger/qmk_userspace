@@ -19,7 +19,7 @@ enum layers {
     DEF,
     SYM,
     NAV,
-    NUM,
+    FUN,
     PWR,
 };
 
@@ -30,8 +30,8 @@ enum keycodes {
     OS_ALT,
     OS_CMD,
 
-    SW_WIN,  // Switch to next window         (cmd-tab)
-    SW_LANG, // Switch to next input language (ctl-spc)
+    SW_WIN,  // Switch to next window         (alt-tab)
+    SW_LANG, // Switch to next input language (gui-spc)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -39,38 +39,40 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
         KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOT,
         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-	                           LA_NAV,  OS_SHFT, LA_PWR,  LA_SYM,
+	                           LA_NAV,  OS_LSFT, LA_PWR,  LA_SYM,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [SYM] = LAYOUT_ferris_hlc(
-        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, KC_MINS, KC_EXLM, KC_QUES, KC_EQL,
-        KC_DLR,  KC_TILD, KC_LPRN, KC_RPRN, KC_ASTR, KC_AMPR, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX, KC_GRV,  KC_UNDS, KC_COLN, KC_SCLN, KC_BSLS,
+        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, KC_PERC, KC_CIRC, KC_MINS, KC_EXLM, KC_QUES, KC_GRV,
+        KC_DLR,  KC_TILD, KC_LPRN, KC_RPRN, KC_ASTR, KC_EQL,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX, KC_AMPR, KC_UNDS, KC_SCLN, KC_COLN, KC_BSLS,
                                    _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [NAV] = LAYOUT_ferris_hlc(
-        XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, KC_DEL,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
-        SW_LANG, XXXXXXX, SPCL,    SPC_R,   XXXXXXX, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
-                                   _______, _______, KC_BSPC,  _______,
+	SPCL,    SPC_R,   KC_WBAK, KC_WFWD, KC_DEL,  MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
+        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TAB,
+        XXXXXXX, XXXXXXX, S(SW_WIN),SW_WIN, XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
+                                   _______, _______, KC_ENT,  _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    ),    
+
+    
+    [FUN] = LAYOUT_ferris_hlc(
+        RM_NEXT, KC_BRIU, KC_VOLU, KC_VOLD, KC_MUTE, KC_F12,  KC_F7,   KC_F8,   KC_F9,   XXXXXXX,
+        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, SW_LANG, KC_F10,  KC_F4,   KC_F5,   KC_F6,   XXXXXXX,
+        RM_TOGG, KC_BRID, KC_MPRV, KC_MNXT, KC_MPLY, KC_F11,  KC_F1,   KC_F2,   KC_F3,   XXXXXXX,
+	                           _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
-    [NUM] = LAYOUT_ferris_hlc(
-        KC_F8,   KC_F7,   KC_F6,   KC_F5,   KC_F12,  KC_MINS, KC_7,    KC_8,    KC_9,    KC_EQL,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_F10,  KC_DOT,  KC_4,    KC_5,    KC_6,    KC_0,
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F11,  KC_COMM, KC_1,    KC_2,    KC_3,    KC_SLSH,
-                                   _______, _______, KC_F9,   _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
-    ),
     [PWR] = LAYOUT_ferris_hlc(
-        KC_NUM,  XXXXXXX, QK_AREP, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRIU, RM_NEXT,
-        CW_TOGG, XXXXXXX, QK_REP,  KC_ENT,  KC_ESC,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPLY, KC_MNXT, KC_MPRV, KC_BRID, RM_TOGG,
-                                   KC_BSPC, KC_TAB,  XXXXXXX, _______,
+	KC_TAB,  KC_9,    KC_8,    KC_7,    KC_COMM, KC_NUM,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        KC_EQL,  KC_6,    KC_5,    KC_4,    KC_MINS, CW_TOGG, KC_TAB,  QK_REP,  QK_AREP, KC_ESC,
+        KC_SLSH, KC_3,    KC_2,    KC_1,    KC_DOT,  KC_CAPS, KC_ENT,  KC_BSPC, KC_DEL,  XXXXXXX,
+                                   KC_0,    KC_BSPC, XXXXXXX, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 };
@@ -110,7 +112,7 @@ oneshot_state os_cmd_state = os_up_unqueued;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     update_swapper(
-        &sw_win_active, KC_LGUI, KC_TAB, SW_WIN,
+        &sw_win_active, KC_LALT, KC_TAB, SW_WIN,
         keycode, record
     );
     update_swapper(
@@ -139,5 +141,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    return update_tri_layer_state(state, SYM, NAV, NUM);
+    return update_tri_layer_state(state, SYM, NAV, FUN);
 }
