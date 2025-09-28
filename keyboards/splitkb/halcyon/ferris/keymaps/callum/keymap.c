@@ -61,9 +61,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     
     [FUN] = LAYOUT_ferris_hlc(
-        RM_NEXT, KC_BRIU, KC_VOLU, KC_VOLD, KC_MUTE, KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_NUM,
+        KC_BRID, KC_BRIU, KC_VOLU, KC_VOLD, KC_MUTE, KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_NUM,
         OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, SW_LANG, KC_F10,  KC_F4,   KC_F5,   KC_F6,   KC_CAPS,
-        RM_TOGG, KC_BRID, KC_MPRV, KC_MNXT, KC_MPLY, KC_F11,  KC_F1,   KC_F2,   KC_F3,   CW_TOGG,
+        RM_TOGG, RM_NEXT, KC_MPRV, KC_MNXT, KC_MPLY, KC_F11,  KC_F1,   KC_F2,   KC_F3,   CW_TOGG,
 	                           _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
