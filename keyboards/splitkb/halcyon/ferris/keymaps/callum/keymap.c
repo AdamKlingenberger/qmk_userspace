@@ -44,17 +44,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYM] = LAYOUT_ferris_hlc(
-        KC_HASH, KC_AT,   KC_RBRC, KC_LBRC, QK_REP,  KC_CIRC, KC_EQL,  KC_EXLM, KC_QUES, KC_GRV,
-        KC_ASTR, KC_PERC, KC_RPRN, KC_LPRN, KC_ENT,  KC_MINS, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_TILD, KC_DLR,  KC_RCBR, KC_LCBR, KC_ESC,  KC_AMPR, KC_UNDS, KC_SCLN, KC_COLN, KC_BSLS,
+        KC_HASH, KC_AT,   KC_RBRC, KC_LBRC, QK_REP,  KC_CIRC, KC_UNDS,  KC_EXLM, KC_QUES, KC_GRV,
+        KC_ASTR, KC_PERC, KC_RPRN, KC_LPRN, KC_ENT,  KC_EQL,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        KC_TILD, KC_DLR,  KC_RCBR, KC_LCBR, KC_ESC,  KC_AMPR, KC_MINS, KC_SCLN, KC_COLN, KC_BSLS,
                                    _______, KC_TAB,  _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [NAV] = LAYOUT_ferris_hlc(
-	XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_REP,  MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, KC_DEL,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_ENT,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_BSPC,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ESC,  KC_ESC,  KC_HOME, KC_END,  KC_PGUP, KC_PGDN,
+	XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,  MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
+        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP, KC_HOME, KC_END,  KC_PGDN, XXXXXXX,
                                    _______, _______, KC_TAB,  _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),    
