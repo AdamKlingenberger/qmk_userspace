@@ -44,9 +44,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYM] = LAYOUT_ferris_hlc(
-        KC_HASH, KC_AT,   KC_RBRC, KC_LBRC, QK_REP,  KC_CIRC, KC_UNDS,  KC_EXLM, KC_QUES, KC_GRV,
-        KC_ASTR, KC_PERC, KC_RPRN, KC_LPRN, KC_ENT,  KC_EQL,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_TILD, KC_DLR,  KC_RCBR, KC_LCBR, KC_ESC,  KC_AMPR, KC_MINS, KC_SCLN, KC_COLN, KC_BSLS,
+        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, QK_REP,  KC_CIRC, KC_UNDS, KC_EXLM, KC_QUES, KC_GRV,
+        KC_ASTR, KC_PERC, KC_LPRN, KC_RPRN, KC_ENT,  KC_EQL,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+        KC_TILD, KC_DLR,  KC_LCBR, KC_RCBR, KC_ESC,  KC_AMPR, KC_MINS, KC_SCLN, KC_COLN, KC_BSLS,
                                    _______, KC_TAB,  _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NAV] = LAYOUT_ferris_hlc(
 	XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,  MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
         OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP, KC_HOME, KC_END,  KC_PGDN, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_END,  KC_PGUP, KC_PGDN,
                                    _______, _______, KC_TAB,  _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),    
@@ -69,8 +69,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [PWR] = LAYOUT_ferris_hlc(
-	KC_MINS, KC_9,    KC_8,    KC_7,    QK_REP,  KC_WFWD, SPCL,    SPC_R,   XXXXXXX, XXXXXXX,
-        KC_DOT,  KC_6,    KC_5,    KC_4,    KC_ENT,  KC_WBAK, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
+	KC_DOT,  KC_9,    KC_8,    KC_7,    QK_REP,  XXXXXXX, KC_WBAK, KC_WFWD, SPCL,    SPC_R,
+        KC_MINS, KC_6,    KC_5,    KC_4,    KC_ENT,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
         KC_COMM, KC_3,    KC_2,    KC_1,    KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                    KC_0,    KC_TAB,  XXXXXXX, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
