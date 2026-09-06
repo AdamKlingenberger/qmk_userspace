@@ -36,43 +36,43 @@ enum keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [DEF] = LAYOUT_ferris_hlc(
-        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
-        KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOT,
-        KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-	                           LA_NAV,  OS_LSFT, LA_PWR,  LA_SYM,
+        KC_Q   , KC_W   , KC_E   , KC_R  ,  KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   ,
+        KC_A   , KC_S   , KC_D   , KC_F  ,  KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_QUOT,
+        KC_Z   , KC_X   , KC_C   , KC_V  ,  KC_B   , KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH,
+	                           LA_NAV,  OS_LSFT, LA_PWR , LA_SYM ,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [SYM] = LAYOUT_ferris_hlc(
-        KC_HASH, KC_AT,   KC_LBRC, KC_RBRC, QK_REP,  KC_CIRC, KC_UNDS, KC_EXLM, KC_QUES, KC_GRV,
-        KC_ASTR, KC_PERC, KC_LPRN, KC_RPRN, KC_ENT,  KC_EQL,  OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_TILD, KC_DLR,  KC_LCBR, KC_RCBR, KC_ESC,  KC_AMPR, KC_MINS, KC_SCLN, KC_COLN, KC_BSLS,
-                                   _______, KC_TAB,  _______, _______,
+        KC_DLR , KC_AT  , KC_LBRC, KC_RBRC, QK_REP , KC_CIRC, KC_UNDS, KC_EXLM, KC_QUES, KC_GRV ,
+        KC_PERC, KC_ASTR, KC_LPRN, KC_RPRN, KC_ENT , KC_EQL , OS_SHFT, OS_ALT , OS_CTRL, OS_CMD ,
+        KC_TILD, KC_HASH, KC_LCBR, KC_RCBR, KC_ESC , KC_AMPR, KC_MINS, KC_SCLN, KC_COLN, KC_BSLS,
+                                   _______, KC_TAB , _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [NAV] = LAYOUT_ferris_hlc(
-	XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,  MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_END,  KC_PGUP, KC_PGDN,
-                                   _______, _______, KC_TAB,  _______,
+	XXXXXXX, XXXXXXX, XXXXXXX, KC_BSPC, KC_DEL , XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, XXXXXXX,
+        OS_CMD , OS_CTRL, OS_ALT , OS_SHFT, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_END , XXXXXXX, XXXXXXX,
+                                   _______, _______, KC_TAB , _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),    
 
     
     [FUN] = LAYOUT_ferris_hlc(
-        KC_BRID, KC_BRIU, KC_VOLU, KC_VOLD, KC_MUTE, KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_NUM,
-        OS_CMD,  OS_CTRL, OS_ALT,  OS_SHFT, SW_LANG, KC_F10,  KC_F4,   KC_F5,   KC_F6,   KC_CAPS,
-        RM_TOGG, RM_NEXT, KC_MPRV, KC_MNXT, KC_MPLY, KC_F11,  KC_F1,   KC_F2,   KC_F3,   CW_TOGG,
+        KC_BRID, KC_BRIU, KC_VOLU, KC_VOLD, KC_MUTE, KC_F12 , KC_F7  , KC_F8  , KC_F9  , KC_NUM ,
+        OS_CMD , OS_CTRL, OS_ALT , OS_SHFT, SW_LANG, KC_F10 , KC_F4  , KC_F5  , KC_F6  , KC_CAPS,
+        RM_TOGG, RM_NEXT, KC_MPRV, KC_MNXT, KC_MPLY, KC_F11 , KC_F1  , KC_F2  , KC_F3  , CW_TOGG,
 	                           _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     [PWR] = LAYOUT_ferris_hlc(
-	KC_DOT,  KC_9,    KC_8,    KC_7,    QK_REP,  XXXXXXX, KC_WBAK, KC_WFWD, SPCL,    SPC_R,
-        KC_MINS, KC_6,    KC_5,    KC_4,    KC_ENT,  XXXXXXX, OS_SHFT, OS_ALT,  OS_CTRL, OS_CMD,
-        KC_COMM, KC_3,    KC_2,    KC_1,    KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                   KC_0,    KC_TAB,  XXXXXXX, _______,
+	KC_DOT , KC_9   , KC_8   , KC_7   , QK_REP , XXXXXXX, KC_WBAK, KC_WFWD, SPCL   , SPC_R  ,
+        KC_MINS, KC_6   , KC_5   , KC_4   , KC_ENT , XXXXXXX, OS_SHFT, OS_ALT , OS_CTRL, OS_CMD ,
+        KC_COMM, KC_3   , KC_2   , KC_1   , KC_ESC , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                   KC_0   , KC_TAB , XXXXXXX, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 };
